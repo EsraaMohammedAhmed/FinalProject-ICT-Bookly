@@ -1,0 +1,407 @@
+/*********************** Set Style All Elements ******************** */
+
+/***********************Set Style Loader Css******************** */
+
+#bookLoaderCss {
+  position: fixed;
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  transform: translate(-50%, -50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  /* font-family: "Poppins", sans-serif;*/
+  -webkit-box-sizing: border-box;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+
+}
+
+/***********************Set Style Body******************** */
+body {
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+
+section {
+  overflow: hidden;
+}
+
+
+
+header .fa-book,
+.fa-cart-shopping,
+.fa-heart,
+.fa-user,
+.fa-search,
+.logoBook {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/*********************** Set Style Section One******************** */
+.sectionOne {
+  background-image: url(../image/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+}
+.sectionOne p {
+  font-size: .75rem;
+  color: rgb(139, 137, 137);
+  line-height: 23px;
+}
+
+h1,
+h3 {
+  font-weight: bold;
+}
+
+.sectionOnePartTwo i {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+h6 {
+  font-weight: bold;
+
+}
+
+
+.navBottom {
+  z-index: 3;
+}
+
+
+
+
+h3 {
+  box-shadow: 2px 2px 2px rgb(24, 24, 23);
+
+}
+
+.sectionArrivals img {
+  height: 90px;
+}
+.sectionSixArrivals {
+  background-color: rgb(243, 243, 243);
+}
+
+/****************************setStyleSwipers*******************/
+/* Demo styles  */
+.swiper {
+  position: relative;
+  overflow: hidden;
+  cursor: grabbing;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+
+.swiperSectionOne .swiper-slide img {
+  height: 160px;
+}
+
+.swiper-slide.card img {
+  height: 220px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+
+.card-body p {
+  font-size: .68rem;
+  font-weight: bold;
+  color: #686464;
+  overflow: hidden;
+
+}
+
+.backgroundParalex {
+  height: 45vh;
+  background-attachment: fixed;
+  background-image: url(../image/letter-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+span {
+  font-size: .7rem;
+}
+
+
+.border {
+  border: 1px solid rgba(220, 221, 223, 0.487);
+
+
+}
+
+.border:hover {
+  border: 1px solid rgba(26, 26, 26, 0.249) !important;
+
+}
+
+
+/* The Overlay (background) ***********************************/
+.overlay {
+
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  right: 0;
+  top: 0;
+  background-color: rgb(254, 254, 254);
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-weight: bold;
+  font-size: .75rem;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.panel-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#forgot {
+  min-width: 100px;
+  margin-left: auto;
+  text-decoration: none;
+}
+
+
+
+.form-inline label {
+  padding-left: 10px;
+  margin: 0;
+  cursor: pointer;
+}
+
+panel {
+  min-height: 380px;
+  box-shadow: 20px 20px 80px rgb(226, 226, 227) !important;
+  border-radius: 80px;
+}
+
+.input-field {
+  border-radius: 8px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+
+}
+
+input[type='text'],
+input[type='password'] {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+a[target='_blank'] {
+  position: relative;
+  transition: all 0.1s ease-in-out;
+}
+
+#forgot {
+
+  font-size: .8rem;
+
+}
+
+/******************************swiper***********************************/
+.swiper-slide.card img {
+  transition: all 4s;
+}
+
+.swiper-slide.card:hover img {
+
+  transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale();
+  -webkit-transform: scale();
+  -ms-transform: scale();
+}
+
+
+.swiper-slide:hover {
+  border-color: #646060;
+}
+
+nav {
+  position: sticky !important;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: var(--z-fixed) !important;
+  transition: .4s;
+  z-index: 2 !important;
+
+}
+
+.RegisterButtons button {
+  border-radius: 100px;
+
+}
+
+li:hover {
+  background-color: rgb(60, 151, 100);
+}
+
+header a i:hover {
+  color: #3caf6e !important;
+}
+
+.beforeFooter {
+
+  border-top: 3px solid rgba(235, 232, 232, 0.939);
+}
+
+
+
+
+/**************************set style section three***************************/
+.swiperSectionThree .swiper-slide:hover img {
+  transform: translate(0, 30px);
+}
+
+.swiperSectionThree .swiper-slide:hover .hSixSwiper {
+  visibility: hidden;
+}
+
+.iconsSwiper {
+  display: none;
+}
+
+.swiper-slide:hover .iconsSwiper {
+  position: absolute;
+  top: 0%;
+  display: flex;
+  justify-content: space-between;
+
+
+
+}
+
+.bg-spring {
+  background: linear-gradient(0deg, #d1d1ce 0%, rgba(0, 0, 0, 0) 0%), linear-gradient(30deg, #e3e5e4 40%, #ffffff 0%);
+}
+
+.sectionThree-slider .swiper-slide img {
+  height: 170px;
+
+}
+
+
+.navBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0%;
+  right: 0%;
+}
+
+/*****sectionCircleImage*****/
+.sectionCircle {
+  overflow: hidden;
+}
+
+.sectionCircleImg div img {
+  border-radius: 50%;
+  width: 20%;
+  height: 70px;
+  object-fit: cover;
+}
+
+.sectionCircle p {
+  font-size: .68rem;
+  font-weight: bold;
+  color: #686464;
+}
+
+/******************************section styles************************************/
+.sectionSixArrivals p {
+  font-size: .7rem;
+}
+
+.sectionSixArrivals h2,
+h6,
+p {
+  font-weight: bold;
+}
+
+
+
+
+/*********footer*************/
+.sectionBeforFooter a:hover {
+  transform: translate(10px);
+  color: #257749;
+  cursor: pointer;
+}
+
+.sectionBeforFooter a {
+  color: #2a2828;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: .77rem;
+  font-weight: bold;
+
+}
+
+.sectionBeforFooter i {
+  font-size: .8rem;
+}
+
+#spanMyName {
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.imgStand img {
+  width: 70%;
+}

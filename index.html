@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bookly</title>
+        <link rel="shortcut icon" href="./image/book-2.png" type="image/x-icon">
+        <!--Link FontIcons-->
+        <link rel="stylesheet" href="./css/all.min.css">
+        <!--*********************linkBootstrapCss-->
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <!--====================link Swiper.Css=======================-->
+        <link rel="stylesheet" href="package/swiper-bundle.min.css">
+        <!--linkMyCSS-->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <!--=================Header==================-->
+        <header class="container-fluid">
+            <div class=" mb-sm-3 mb-2 justify-content-between justify-content-md-around d-flex pt-3">
+                <div class="">
+                    <a href="" class="logo text-decoration-none ">
+                        <i class="fa-solid fa-book 
+                     text-success "></i>
+                        <span class="text-black logoBook "> Bookly</span>
+                    </a>
+                </div>
+                <form class="form-inline col-4 d-md-flex position-relative  d-none ">
+                    <input
+                        class=" form-control  input-group-append"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                        value="search"
+                        id="example-search-input"
+                    >
+                    <i class="fas fa-search position-absolute end-0 top-25 pt-2 pe-3"></i>
+                </form>
+                <div class="divIconsHeader  ">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fas fa-search  d-md-none text-black "></i>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-heart  text-black "></i>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-cart-shopping text-black "></i>
+                    </a>
+                    <!-- Use any element to open/show the overlay navigation menu -->
+                    <!-- <span onclick="openNav()"> -->
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-user  mb-2 ps-sm-1 text-black" onclick="openNav()"></i>
+                    </a>
+                    <!-- </span>  -->
+                    <!-- The overlay -->
+                    <div id="myNav" class="overlay">
+                        <!-- Button to close the overlay navigation -->
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <!-- Overlay content -->
+                        <div class="overlay-content">
+                            <div class="container mt-5 pt-5 ">
+                                <div class="row">
+                                    <div class="offset-lg-4 col-lg-4 col-md-6 offset-md-3  col-12 mt-2 pt-2 mb-5 pb-5 ">
+                                        <div class="panel border bg-white">
+                                            <div class="panel-heading">
+                                                <h4 class="pt-3">SIGN IN</h4>
+                                            </div>
+                                            <div class="panel-body ms-3 me-3 ">
+                                                <form action="login_script.php" method="POST">
+                                                    <div class="form-group ">
+                                                        <label for="exampleUserName">User name</label>
+                                                        <div class="input-field mt-2">
+                                                            <input type="text" placeholder="Username or Email" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputPassword1" class="pt-3">Password</label>
+                                                        <div class="input-field mt-2">
+                                                            <input type="password" placeholder="Enter your Password" required>
+                                                            <button class="btn bg-white text-muted"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-inline">
+                                                        <input type="checkbox" name="remember" id="remember">
+                                                        <label for="remember" class="text-muted pt-3">Remember me</label>
+                                                    </div>
+                                                    <button class="btn btn-success btn-block mt-3 mb-3 w-100 text-center">
+                                                        Sign in
+                                                    </button>
+                                                    <p class="text-secondary">
+                                                        Forgot password?
+                                                        <a href="#" id="forgot" class="text-decoration-underline d-inline text-success">click here</a>
+                                                    </p>
+                                                    <p class="text-secondary">
+                                                        Don't have an account?
+                                                        <a href="#" class=" text-success text-decoration-underline d-inline " id="forgot">Creat one</a>
+                                                    </p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--*************************EndHeader********************************-->
+        <!--===========navTop================-->
+        <nav class=" p-0 bg-success  d-md-flex justify-content-center  text-body  container-fluid  navbar navbar-expand-lg col-12   d-none ">
+            <div class=" ">
+                <ul class="nav nav-pills nav ">
+                    <li class="nav-item ">
+                        <a href="#Home" class="nav-link  text-light" aria-current="page ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#featured" class="nav-link text-light">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Arrivals" class="nav-link text-light">Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Reviews" class="nav-link text-light">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Bloges" class="nav-link text-light">Bloges</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--*********************navBottom=============================-->
+        <section class="container-fluid navBottom ">
+            <div class=" bg-success p-0  d-md-none justify-content-around  navBottom  text-body   navbar navbar-expand-lg col-12   d-flex ">
+                <ul class="nav nav-pills nav">
+                    <li class="nav-item">
+                        <a href="#Home" class="nav-link  text-light" aria-current="page ">
+                            <i class="fa-solid fa-house"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#featured" class="nav-link text-light">
+                            <i class="fa-solid fa-list"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Arrivals" class="nav-link text-light">
+                            <i class="fa-solid fa-tags"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Reviews" class="nav-link text-light">
+                            <i class="fa-sharp fa-solid fa-comments"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Bloges" class="nav-link text-light">
+                            <i class="fa-solid fa-blog"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--startMain******************************************************-->
+        <main>
+            <section class="sectionOne container-fluid pt-md-3 pt-1 " id="Home">
+                <div class="row  mb-5 mt-sm-5 mt-4 ">
+                    <div class=" text-center text-md-start  col-md-5  mt-md-5  offset-md-1   offset-sm-3 col-sm-6 col-12 d-md-block d-flex flex-column justify-content-center align-items-center ">
+                        <h1 class="pb-md-1 ">UP TO 75% OFF</h1>
+                        <P class="text-center text-md-start pb-sm-3 pb-md-0 ">
+                            Lorem ipsum dolor sit amet, consectetur 
+                            adipisicing elit. magnam deserant nastrunt accusamus nam  alias sit necssitatibus alquid ex minima at!
+                        </P>
+                        <button class=" btn  btn-success mb-3 ">Shop Now</button>
+                    </div>
+                    <!-- Swiper -->
+                    <div class="  col-md-6 col-sm-12  col-12">
+                        <div class="swiper mySwiper col-9  ">
+                            <div class="swiper-wrapper swiperSectionOne  ">
+                                <div class=" swiper-slide d-flex justify-content-center align-items-center">
+                                    <img src="./image/book-3.png" class="d-block ">
+                                </div>
+                                <div class="swiper-slide d-flex align-items-center justify-content-center ">
+                                    <img src="./image/book-4.png" class="d-block">
+                                </div>
+                                <div class="swiper-slide  d-flex align-items-center justify-content-center">
+                                    <img src="./image/book-5.png" class="d-block">
+                                </div>
+                                <div class="swiper-slide  d-flex align-items-center justify-content-center ">
+                                    <img src="./image/book-1.png">
+                                </div>
+                                <div class="swiper-slide d-flex justify-content-center align-items-center ">
+                                    <img src="./image/book-7.png">
+                                </div>
+                                <div class="swiper-slide  d-flex justify-content-center align-items-center">
+                                    <img src="./image/book-6.png">
+                                </div>
+                                <div class="swiper-slide d-flex  justify-content-center align-items-center">
+                                    <img src="./image/book-4.png">
+                                </div>
+                                <div class="swiper-slide d-flex  justify-content-center align-items-center">
+                                    <img src="./image/book-1.png">
+                                </div>
+                                <div class="swiper-slide  d-flex justify-content-center align-items-center">
+                                    <img src="./image/book-2.png">
+                                </div>
+                                <div class="swiper-slide d-flex justify-content-center align-items-center">
+                                    <img src="./image/book-3.png">
+                                </div>
+                                <div class="swiper-slide  d-flex justify-content-center align-items-center">
+                                    <img src="./image/book-4.png">
+                                </div>
+                                <div class="swiper-slide d-flex justify-content-center align-items-center ">
+                                    <img src="./image/book-5.png">
+                                </div>
+                                <div class="swiper-slide d-flex justify-content-center align-items-center               ">
+                                    <img src="./image/book-6.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="imgStand d-flex justify-content-center align-items-center ">
+                            <img src="./image/stand.png" class="">
+                        </div>
+                    </div>
+                </section>
+                <!--********************* End Section One & ***********************************-->
+                <!--====///====******===///=====///======**======///===*****//*///***======///=====-->
+                <!--********************* StartSectionOnePartTwo & ***********************************-->
+                <section class=" sectionOnePartTwo container-lg  container-fluid   mt-5  mt-lg-5  mb-lg-5 pt-md-5  mt-2   " id="Home">
+                    <div class="row ps-lg-5 ps-md-2 ">
+                        <div class=" d-flex col-md-3 col-sm-12 mb-3 pb-2  ">
+                            <i class="fa-solid fa-truck-fast pt-2 pe-2 text-success"></i>
+                            <div>
+                                <h6 class="mb-0">free shopping</h6>
+                                <span class="text-secondary">order over $100</span>
+                            </div>
+                        </div>
+                        <div class="d-flex  col-md-3 col-sm-12 mb-3 pb-2">
+                            <i class="fa-solid fa-lock pt-2  pe-2 text-success "></i>
+                            <div>
+                                <h6 class="mb-0">Secure Payment</h6>
+                                <span class="text-secondary">$100 Secure Payment</span>
+                            </div>
+                        </div>
+                        <div class="d-flex  col-md-3 col-sm-12 mb-3 pb-2  ">
+                            <i class="fa-solid fa-rotate-right pt-2 pe-2 text-success "></i>
+                            <div>
+                                <h6 class="mb-0">Easy Returns</h6>
+                                <span class="text-secondary">10 Days Returns</span>
+                            </div>
+                        </div>
+                        <div class="d-flex col-md-3 col-sm-12 mb-3 pb-2">
+                            <i class="fa-solid fa-headset text-success pt-2 pe-2"></i>
+                            <div class="">
+                                <h6 class="mb-0">24/7 Support</h6>
+                                <span class="text-secondary">Cal Us Any Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ******************************swiperSectionThree ***************************************-->
+                <section id="featured" class="container swiperSectionThree  mb-4 pt-md-1 mb-md-5 mb-sm-4">
+                    <div class="text-center  mt-md-2 pt-md-5 pt-5 d-flex justify-content-center align-items-center">
+                        <h3 class="border d-inline-block  ps-2 pe-2">
+                            Features
+                        </h3>
+                    </div>
+                    <div class="swiper sectionThree-slider mt-4 mt-sm-5  ">
+                        <div class="swiper-wrapper">
+                            <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                                <div class="iconsSwiper col-12  border p-2 ">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div>
+                                    <img src="./image/book-9.png" alt="" class="mt-2">
+                                </div>
+                                <div class="">
+                                    <h6 class="hSixSwiper">Featured Books</h6>
+                                </div>
+                                <p class="">
+                                    $15.99
+                                    <span class="text-decoration-line-through">$20.00</span>
+                                </p>
+                                <button class=" btn  btn-success mb-2">Add To Card</button>
+                            </div>
+                            <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                                <div class="iconsSwiper col-12  border p-2 ">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div>
+                                    <img src="./image/book-10.png" alt="" class="mt-2">
+                                </div>
+                                <div class="">
+                                    <h6 class="hSixSwiper">Featured Books</h6>
+                                </div>
+                                <p>
+                                    $15.99
+                                    <span class="text-decoration-line-through">$20.00</span>
+                                </p>
+                                <button class=" btn  btn-success mb-2">Add To Card</button>
+                            </div>
+                            <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                                <div class="iconsSwiper col-12  border p-2 ">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div>
+                                    <img src="./image/book7.png" alt="" class="mt-2">
+                                </div>
+                                <div class="">
+                                    <h6 class="hSixSwiper">Featured Books</h6>
+                                </div>
+                                <p>
+                                    $15.99
+                                    <span class="text-decoration-line-through">$20.00</span>
+                                </p>
+                                <button class=" btn  btn-success mb-2">Add To Card</button>
+                            </div>
+                            <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                                <div class="iconsSwiper col-12  border p-2 ">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div>
+                                    <img src="./image/book-8.png" alt="" class="mt-2">
+                                </div>
+                                <div class="">
+                                    <h6 class="hSixSwiper">Featured Books</h6>
+                                </div>
+                                <p>
+                                    $15.99
+                                    <span class="text-decoration-line-through">$20.00</span>
+                                </p>
+                                <button class=" btn  btn-success mb-2">Add To Card</button>
+                            </div>
+                            <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                                <div class="iconsSwiper col-12  border p-2">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div>
+                                    <img src="./image/book-7.png" alt="" class="mt-2">
+                                </div>
+                                <div class="">
+                                    <h6 class="hSixSwiper">Featured Books</h6>
+                                </div>
+                                <p>
+                                    $15.99
+                                    <span class="text-decoration-line-through">$20.00</span>
+                                </p>
+                                <button class=" btn  btn-success mb-2">Add To Card</button>
+                            </div>
+                            <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                                <div class="iconsSwiper col-12  border p-2 ">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fas fa-search"></i>
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div>
+                                    <img src="./image/book-6.png" alt="" class="mt-2">
+                                </div>
+                                <div class="">
+                                    <h6 class="hSixSwiper">Featured Books</h6>
+                                </div>
+                                <p>
+                                    $15.99
+                                    <span class="text-decoration-line-through">$20.00</span>
+                                </p>
+                                <button class=" btn  btn-success mb-2">Add To Card</button>
+                            </div>
+                            <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                                <div class="iconsSwiper col-12  border p-2 ">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div>
+                                    <img src="./image/book-1.png" alt="" class="mt-2">
+                                </div>
+                                <div class="">
+                                    <h6 class="hSixSwiper">Featured Books</h6>
+                                </div>
+                                <p class="">
+                                    $15.99
+                                    <span class="text-decoration-line-through">$20.00</span>
+                                </p>
+                                <button class=" btn  btn-success mb-2">Add To Card</button>
+                            </div>
+                            <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                                <div class="iconsSwiper col-12  border p-2 ">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div>
+                                    <img src="./image/book-10.png" alt="" class="mt-2">
+                                </div>
+                                <div class="">
+                                    <h6 class="hSixSwiper">Featured Books</h6>
+                                </div>
+                                <p class="">
+                                    $15.99
+                                    <span class="text-decoration-line-through">$20.00</span>
+                                </span>
+                            </p>
+                            <button class=" btn  btn-success mb-2">Add To Card</button>
+                        </div>
+                        <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                            <div class="iconsSwiper col-12  border p-2 ">
+                                <i class="fas fa-search"></i>
+                                <i class="fa-solid fa-heart"></i>
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div>
+                                <img src="./image/book-3.png" alt="" class="mt-2">
+                            </div>
+                            <div class="">
+                                <h6 class="hSixSwiper">Featured Books</h6>
+                            </div>
+                            <p class="">
+                                $15.99
+                                <span class="text-decoration-line-through">$20.00</span>
+                            </p>
+                            <button class=" btn  btn-success mb-2">Add To Card</button>
+                        </div>
+                        <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                            <div class="iconsSwiper col-12  border p-2 ">
+                                <i class="fas fa-search"></i>
+                                <i class="fa-solid fa-heart"></i>
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div>
+                                <img src="./image/book-8.png" alt="" class="mt-2">
+                            </div>
+                            <div class="">
+                                <h6 class="hSixSwiper">Featured Books</h6>
+                            </div>
+                            <p class="">
+                                $15.99
+                                <span class="text-decoration-line-through">$20.00</span>
+                            </p>
+                            <button class=" btn  btn-success mb-2">Add To Card</button>
+                        </div>
+                        <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                            <div class="iconsSwiper col-12  border p-2 ">
+                                <i class="fas fa-search"></i>
+                                <i class="fa-solid fa-heart"></i>
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div>
+                                <img src="./image/book-4.png" alt="" class="mt-2">
+                            </div>
+                            <div class="">
+                                <h6 class="hSixSwiper">Featured Books</h6>
+                            </div>
+                            <p class="">
+                                $15.99
+                                <span class="text-decoration-line-through">$20.00</span>
+                            </p>
+                            <button class=" btn  btn-success mb-2">Add To Card</button>
+                        </div>
+                        <div class="position-relative bg-spring  swiper-slide slide d-flex flex-column justify-content-center align-items-center border ">
+                            <div class="iconsSwiper col-12  border p-2 ">
+                                <i class="fas fa-search"></i>
+                                <i class="fa-solid fa-heart"></i>
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div>
+                                <img src="./image/book-5.png" alt="" class="mt-2">
+                            </div>
+                            <div class="">
+                                <h6 class="hSixSwiper">Featured Books</h6>
+                            </div>
+                            <p class="">
+                                $15.99
+                                <span class="text-decoration-line-through">$20.00</span>
+                            </p>
+                            <button class=" btn  btn-success mb-2">Add To Card</button>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next text-black border"></div>
+                    <div class="swiper-button-prev border text-black"></div>
+                </div>
+            </section>
+            <!--***************************EndSectionThree-->
+            <!--*********StartSectionFour&BackgroundParalex*******************-->
+            <section class=" backgroundParalex  text-light container-fluid text-center d-flex d-sm-block justify-content-center align-items-center text-center pb-5 pb-md-0 mb-md-0 mb-5" id="featured">
+                <div class=" col-12 offset-sm-5 col-sm-7  offset-md-7 col-md-5 pt-sm-5">
+                    <h4 class="" style="font-size:1rem;">subscribe for latest Updates</h4>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="enter your email"
+                        pattern=".+@gmail.com"
+                        class="col-11 col-sm-7 p-1 "
+                        style="border-radius: 4px;"
+                    >
+                    <div class="mt-3">
+                        <input type="submit" value="Submit" class="btn btn-success col-md-3 col-sm-5 col-4 ">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--**********************===============*****************************-->
+        <!-- Swiper Grid -->
+        <!--Swiper Grid Two Column & Column One-->
+        <section class="container mb-md-5 pb-3 mt-md-5 mt-3 pt-2 pt-md-5 sectionArrivals " id="Arrivals">
+            <div class="text-center mb-4    d-flex justify-content-center align-items-center">
+                <h3 class="border d-inline-block  ps-2 pe-2 ">
+                    New Arrivals
+                </h3>
+            </div>
+            <div class="swiper mySwiper gridSwiper">
+                <div class="swiper-wrapper mb-2 ">
+                    <div class="swiper-slide border ">
+                        <div class="d-flex gap-2 mt-3 mb-3">
+                            <div class="">
+                                <img src="./image/book-6.png ">
+                            </div>
+                            <div class="  d-flex  flex-column  ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary   text-decoration-line-through   ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mt-3 mb-3">
+                            <div class="">
+                                <img src="./image/book-1.png ">
+                            </div>
+                            <div class="  d-flex  flex-column ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary text-decoration-line-through   ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book-4.png ">
+                            </div>
+                            <div class="  d-flex  flex-column  ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary  text-decoration-line-through ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book-8.png " class="" style="height: 90px">
+                            </div>
+                            <div class="  d-flex  flex-column   ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary text-decoration-line-through     ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2  mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book7.png ">
+                            </div>
+                            <div class="  d-flex  flex-column ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary text-decoration-line-through     ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mt-3 mb-3">
+                            <div class="">
+                                <img src="./image/book-2.png ">
+                            </div>
+                            <div class="  d-flex  flex-column   ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary        text-decoration-line-through       ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book-9.png ">
+                            </div>
+                            <div class="  d-flex  flex-column   ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary  text-decoration-line-through         ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mt-3 mb-3">
+                            <div class="">
+                                <img src="./image/book-10.png ">
+                            </div>
+                            <div class="d-flex  flex-column">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary text-decoration-line-through">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book-7.png ">
+                            </div>
+                            <div class="d-flex  flex-column">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary text-decoration-line-through           ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mt-3 mb-3">
+                            <div class="">
+                                <img src="./image/book-7.png ">
+                            </div>
+                            <div class="  d-flex  flex-column  ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary text-decoration-line-through  ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Swiper Grid Two Column & Column Two-->
+            <div class="swiper mySwiper gridSwiper">
+                <div class="swiper-wrapper mb-2">
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2  mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book7.png ">
+                            </div>
+                            <div class="  d-flex  flex-column  ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary    text-decoration-line-through        ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mt-3 mb-3">
+                            <div class="">
+                                <img src="./image/book-2.png ">
+                            </div>
+                            <div class="  d-flex  flex-column   ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary     text-decoration-line-through      ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book-9.png ">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary text-decoration-line-through">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mt-3 mb-3">
+                            <div class="">
+                                <img src="./image/book-10.png ">
+                            </div>
+                            <div class="  d-flex  flex-column  ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary text-decoration-line-through">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book-6.png ">
+                            </div>
+                            <div class="  d-flex  flex-column ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary   text-decoration-line-through   ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mt-3 mb-3">
+                            <div class="">
+                                <img src="./image/book-2.png ">
+                            </div>
+                            <div class="  d-flex  flex-column  ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondarytext-decoration-line-through">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book-9.png ">
+                            </div>
+                            <div class="  d-flex  flex-column mt-2  ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary   text-decoration-line-through         ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book-7.png ">
+                            </div>
+                            <div class="  d-flex  flex-column  ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary     text-decoration-line-through    ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book-4.png ">
+                            </div>
+                            <div class="  d-flex  flex-column   ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary    text-decoration-line-through  ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide border">
+                        <div class="d-flex gap-2 mb-3 mt-3">
+                            <div class="">
+                                <img src="./image/book-5.png ">
+                            </div>
+                            <div class="  d-flex  flex-column  ">
+                                <h6 class="">New Arrivals</h6>
+                                <h6 class="text-secondary">
+                                    $15.00
+                                    <span class="text-secondary text-decoration-line-through    ">$20.09</span>
+                                </h6>
+                                <div>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star text-success"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--*************************EndGrid&Swiper******************//////////////////////-->
+        <!--===============***sectionSix&Arrivals************************************************** -->
+        <section class=" sectionSixArrivals container-fluid  pt-md-3 mt-0  mb-3 pb-5 pb-md-0" id="Arrivals">
+            <div class="row">
+                <div class=" offset-md-1 col-md-5 col-12  mt-5 pt-md-5 ">
+                    <h6 class="text-success pb-1 ">Dealy Of The Day</h6>
+                    <h2 class="pb-1">UP TO 75% OFF</h2>
+                    <P class="text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur 
+                            adipisicing elit. Vitae officiis qui quidem 
+                            consequuntur nesciunt voluptates illum natus
+                             incidunt provident porro .
+                    </P>
+                    <button class=" btn  btn-success mb-5 ">Shop Now</button>
+                </div>
+                <img src="./image/deal-img.jpg " alt="" class="col-md-6  col-12">
+            </div>
+        </section>
+        <!--======================*****sectionReviews============================-->
+        <section class="container sectionCircle mt-md-2  mb-md-5 mb-sm-5 pt-md-5 pt-2 pb-3 pb-md-0  " id="Reviews">
+            <div class="swiper mySwiper col-md-11 col-12">
+                <div class="text-center  mt-3 pt-3 pt-m-md-0 d-flex justify-content-center align-items-center">
+                    <h3 class="border d-inline-block  ps-2 pe-2">
+                        client's   Reviews
+                    </h3>
+                </div>
+                <div class="swiper-wrapper mt-4 sectionCircleImg">
+                    <div class="swiper-slide text-center d-flex flex-column justify-content-center align-items-center border rounded-2">
+                        <img src="./image/pic-5.png" class="mt-3 ">
+                        <h4 class="pt-2">john deo</h4>
+                        <p class="ms-3 me-3 text-center ">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    Laudantium quia ducimus maxime voluptatem esse illum odio
+      
+     sed voluptas 
+     .
+                        </p>
+                        <div class="text-success mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide text-center d-flex flex-column justify-content-center align-items-center border rounded-2">
+                        <img src="./image/pic-4.png" class="mt-3 ">
+                        <h4 class="pt-2">john deo</h4>
+                        <p class="ms-3 me-3 text-center ">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    Laudantium quia ducimus maxime voluptatem esse illum odio
+      
+     sed voluptas 
+     .
+                        </p>
+                        <div class="text-success mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide text-center d-flex flex-column justify-content-center align-items-center border rounded-2">
+                        <img src="./image/pic-6.png" class="mt-3 ">
+                        <h4 class="pt-2">john deo</h4>
+                        <p class="ms-3 me-3 text-center ">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    Laudantium quia ducimus maxime voluptatem esse illum odio
+      
+     sed voluptas 
+     .
+                        </p>
+                        <div class="text-success mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide text-center d-flex flex-column justify-content-center align-items-center border rounded-2">
+                        <img src="./image/pic-2.png" class="mt-3 ">
+                        <h4 class="pt-2">john deo</h4>
+                        <p class="ms-3 me-3 text-center ">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    Laudantium quia ducimus maxime voluptatem esse illum odio
+      
+     sed voluptas 
+     .
+                        </p>
+                        <div class="text-success mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide text-center d-flex flex-column justify-content-center align-items-center border rounded-2">
+                        <img src="./image/pic-3.png" class="mt-3 ">
+                        <h4 class="pt-2">john deo</h4>
+                        <p class="ms-3 me-3 text-center ">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    Laudantium quia ducimus maxime voluptatem esse illum odio
+      
+     sed voluptas 
+     .
+                        </p>
+                        <div class="text-success mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide text-center d-flex flex-column justify-content-center align-items-center border rounded-2">
+                        <img src="./image/pic-1.png" class="mt-3 ">
+                        <h4 class="pt-2">john deo</h4>
+                        <p class="ms-3 me-3 text-center ">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    Laudantium quia ducimus maxime voluptatem esse illum odio
+      
+     sed voluptas 
+     .
+                        </p>
+                        <div class="text-success mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--**************===================*********************-->
+        <!--*********Start Section Gard *******************-->
+        <section class=" container mt-2 mt-sm-0  pt-md-2 p-sm-0 mb-5 pt-1" id="Bloges">
+            <div class="text-center d-flex justify-content-center align-items-center pt-3 mt-3">
+                <h3 class="border d-inline-block ps-2 pe-2 pt-sm-4 pt-md-0 ">Our Bloges</h3>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper mt-4  col-12 col-md-10 col-lg-11 ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide card border">
+                        <img src="./image/blog-4.jpg" class="card-img-top" alt="image">
+                        <div class="card-body ">
+                            <h5 class="card-title">Blogs Title Goes Here</h5>
+                            <p class="card-text">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Optio odio.</p>
+                            <a href="#" class="btn btn-success">Read More</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide  card  border  ">
+                        <div>
+                            <img src="./image/blog-5.jpg" class="card-img-top" alt="image">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Blogs Title Goes Here</h5>
+                            <p class="card-text">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Optio odio.</p>
+                            <a href="#" class="btn btn-success">Read More</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card border ">
+                        <div>
+                            <img src="./image/blog-1.jpg" class="card-img-top" alt="image">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Blogs Title Goes Here</h5>
+                            <p class="card-text">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Optio odio.</p>
+                            <a href="#" class="btn btn-success">Read More</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card border  ">
+                        <div>
+                            <img src="./image/blog-3.jpg" class="card-img-top" alt="image">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Blogs Title Goes Here</h5>
+                            <p class="card-text">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Optio odio.</p>
+                            <a href="#" class="btn btn-success">Read More</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card border ">
+                        <img src="./image/blog-2.jpg" class="card-img-top" alt="img">
+                        <div class="card-body">
+                            <h5 class="card-title">Blogs Title Goes Here</h5>
+                            <p class="card-text">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Optio odio.</p>
+                            <a href="#" class="btn btn-success">Read More</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card border ">
+                        <img src="./image/blog-4.jpg" class="card-img-top" alt="img">
+                        <div class="card-body">
+                            <h5 class="card-title">Blogs Title Goes Here</h5>
+                            <p class="card-text">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Optio odio.</p>
+                            <a href="#" class="btn btn-success">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--***********************==========****Befor footer*****======*************************-->
+        <section class="container mt-5 pt-3 pt-lg-5 sectionBeforFooter">
+            <div class="row">
+                <div class="col-md-3 col-12 ">
+                    <h6 class="mb-3">Our Location</h6>
+                    <div class="pb-2">
+                        <i class="fa-solid fa-location-dot text-success "></i>
+                        <a href="#" class="text-decoration-none d-inline-block pb-1">
+                            india
+                        </a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-solid fa-location-dot text-success"></i>
+                        <a href="#" class=" text-decoration-none d-inline-block pb-1">
+                            USA
+                        </a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-solid fa-location-dot text-success "></i>
+                        <a href="#" class="text-decoration-none d-inline-block pb-1">
+                            russia
+                        </a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-solid fa-location-dot text-success"></i>
+                        <a href="#" class="d-inline-block  text-decoration-none pb-1">
+                            france
+                        </a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-solid fa-location-dot text-success"></i>
+                        <a href="#" class=" text-decoration-none d-inline-block pb-1">
+                            japan
+                        </a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-solid fa-location-dot text-success"></i>
+                        <a href="#" class="text-decoration-none d-inline-block pb-1">
+                            africa
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 ">
+                    <h6 class="mb-3 mt-3">quick links</h6>
+                    <div class="pb-2">
+                        <i class="fa-sharp fa-solid fa-arrow-right text-success"></i>
+                        <a href="#" class=" text-decoration-none  d-inline-block">home</a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-sharp fa-solid fa-arrow-right text-success"></i>
+                        <a href="#" class=" text-decoration-none  d-inline-block">featured</a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-sharp fa-solid fa-arrow-right text-success"></i>
+                        <a href="#" class=" text-decoration-none   d-inline-block">arrivals</a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-sharp fa-solid fa-arrow-right text-success"></i>
+                        <a href="#" class=" text-decoration-none    d-inline-block">reviews</a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-sharp fa-solid fa-arrow-right text-success "></i>
+                        <a href="#" class=" text-decoration-none d-inline-block ">bloges</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 text-decoration-none">
+                    <h6 class="mb-3  mt-3">extra links</h6>
+                    <div class="pb-2">
+                        <i class="fa-sharp fa-solid fa-arrow-right text-success"></i>
+                        <a href="#" class=" text-decoration-none d-inline-block ">account info</a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-sharp fa-solid fa-arrow-right text-success"></i>
+                        <a href="#" class=" text-decoration-none d-inline-block"> ordered items</a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-sharp fa-solid fa-arrow-right text-success"></i>
+                        <a href="#" class=" text-decoration-none d-inline-block">privace police</a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-sharp fa-solid fa-arrow-right text-success"></i>
+                        <a href="#" class=" text-decoration-none d-inline-block">payment method</a>
+                    </div>
+                    <div class="pb-2">
+                        <i class="fa-sharp fa-solid fa-arrow-right text-success"></i>
+                        <a href="#" class=" text-decoration-none d-inline-block">our serivces</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12 ">
+                    <h6 class="mb-3  mt-3">Contact info</h6>
+                    <div class="pb-2">
+                        <i class=" text-success fa-solid fa-phone-flip"></i>
+                        <a href="tel:+12-3456-7690" class="d-inline-block text-decoration-none">+123-456-7690</a>
+                    </div>
+                    <div class="pb-2">
+                        <i class=" text-success fa-solid fa-phone-flip"></i>
+                        <a href="tel:+12-3456-7690" class="d-inline-block text-decoration-none">+111-222-3333</a>
+                    </div>
+                    <div class="pb-2">
+                        <i class=" text-success fa-solid fa-envelope"></i>
+                        <a href="mailto:@gmail.com" class="text-decoration-none d-inline-block ">shaikhanas@gmail.com</a>
+                    </div>
+                    <div class="pb-2">
+                        <img
+                            src="./image/worldmap.png"
+                            alt="image"
+                            width="100%"
+                            class=" "
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section********************************************-->
+        <!-- Register buttons -->
+        <div class="text-center  RegisterButtons mt-5 mb-3">
+            <button type="button" class="btn btn-success  btn-floating mx-1">
+                <a href="#" class="text-center text-light">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </button>
+            <button type="button" class="btn btn-success btn-floating mx-1">
+                <a href="#" class="text-light">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </button>
+            <button type="button" class="btn btn-success btn-floating mx-1">
+                <a href="#" class="text-light">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </button>
+            <button type="button" class="btn btn-success  btn-floating mx-1">
+                <a href="#" class="text-light text-center">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </button>
+            <button type="button" class="btn btn-success  btn-floating mx-1">
+                <a href="#" class="text-light">
+                    <i class="fa-brands fa-pinterest"></i>
+                </a>
+            </button>
+        </div>
+        <!--Section: Content-->
+        <!--Main layout-->
+        <div class="beforFooter container-fluid mt-3 mb-3">
+            <div class=" offset-1 col-10 beforeFooter"></div>
+        </div>
+    </main>
+    <!--**************============Footer***********************************-->
+    <footer class="">
+        <div class=" col-12  mb-md-3 mt-md-4  mt-3 mb-5 pb-2">
+            <p class=" text-center">
+                Created By:
+                <span class="text-success" id="spanMyName">Esraa Mohamed Ahmed projects</span>
+                |All Rights Reserved!
+            </p>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!--Footer-->
+    <!--*********************startLoader*************************** -->
+    <div id="loader" class="col-12">
+        <div id="bookLoaderCss">
+            <img src="./image/book-loading.gif" width="100">
+        </div>
+    </div>
+    <!--*********************endLoader*************************** -->
+    <!--********************links scripts ************==================-->
+    <script src="./script/bootstrap.min.js"></script>
+    <script src="./package/swiper-bundle.min.js"></script>
+    <!--====================script My Script =====================-->
+    <script src="./script/script.js"></script>
+</body>
+</html>
